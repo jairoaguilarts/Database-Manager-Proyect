@@ -1159,7 +1159,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                     }
                     case "GRANT", "grant" -> {
                         if (separado[i + 1].equalsIgnoreCase("DATABASE")) {
-                            if (separado[i + 3].equals("TO")) {
+                            if (separado[i + 3].equalsIgnoreCase("TO")) {
                                 Base bd = obtenerBase(separado[i + 2]);
                                 int a = 0;
                                 for (Base base : ab.getBases()) {
