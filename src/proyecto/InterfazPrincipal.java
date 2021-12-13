@@ -32,7 +32,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         this.setExtendedState(MAXIMIZED_BOTH);
         this.setTitle("Manejador Bases de Datos");
         colorear();
-        diagrama.setForeground(Color.white);
+        diagrama.setBackground(Color.white);
         lectorCode.setEnabled(false);
         ejecutar.setEnabled(false);
     }
@@ -64,6 +64,17 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         delete = new javax.swing.JCheckBox();
         drop = new javax.swing.JCheckBox();
         btCrear = new javax.swing.JButton();
+        jdEditarPermisos = new javax.swing.JDialog();
+        jLabel9 = new javax.swing.JLabel();
+        labelUsuario = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        Gestion = new javax.swing.JCheckBox();
+        Create = new javax.swing.JCheckBox();
+        Insert = new javax.swing.JCheckBox();
+        Select = new javax.swing.JCheckBox();
+        Delete = new javax.swing.JCheckBox();
+        Drop = new javax.swing.JCheckBox();
         popUpDatabase = new javax.swing.JPopupMenu();
         miCrear = new javax.swing.JMenuItem();
         miEliminar = new javax.swing.JMenuItem();
@@ -72,6 +83,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         miEliminarT = new javax.swing.JMenuItem();
         popUpUser = new javax.swing.JPopupMenu();
         miPermisos = new javax.swing.JMenuItem();
+        miEditarPermisos = new javax.swing.JMenuItem();
         popUpPanel = new javax.swing.JPopupMenu();
         limpiar = new javax.swing.JMenuItem();
         jToolBar1 = new javax.swing.JToolBar();
@@ -257,6 +269,87 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
+        jLabel9.setText("Editando:");
+
+        jLabel10.setText("Seleccione los permisos a dar:");
+
+        jButton1.setText("Guardar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
+        Gestion.setText("Gestión");
+
+        Create.setText("Create");
+
+        Insert.setText("Insert");
+
+        Select.setText("Select");
+
+        Delete.setText("Delete");
+
+        Drop.setText("Drop");
+
+        javax.swing.GroupLayout jdEditarPermisosLayout = new javax.swing.GroupLayout(jdEditarPermisos.getContentPane());
+        jdEditarPermisos.getContentPane().setLayout(jdEditarPermisosLayout);
+        jdEditarPermisosLayout.setHorizontalGroup(
+            jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jdEditarPermisosLayout.createSequentialGroup()
+                .addGroup(jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jdEditarPermisosLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(labelUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jdEditarPermisosLayout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addGroup(jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addGroup(jdEditarPermisosLayout.createSequentialGroup()
+                                .addGap(61, 61, 61)
+                                .addComponent(jButton1))))
+                    .addGroup(jdEditarPermisosLayout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addGroup(jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Gestion)
+                            .addComponent(Create)
+                            .addComponent(Insert))
+                        .addGap(18, 18, 18)
+                        .addGroup(jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Drop)
+                            .addComponent(Delete)
+                            .addComponent(Select))))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+        jdEditarPermisosLayout.setVerticalGroup(
+            jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jdEditarPermisosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(33, 33, 33)
+                .addComponent(jLabel10)
+                .addGap(18, 18, 18)
+                .addGroup(jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Gestion)
+                    .addComponent(Select))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Create)
+                    .addComponent(Delete))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Insert)
+                    .addComponent(Drop))
+                .addGap(48, 48, 48)
+                .addComponent(jButton1)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+
         miCrear.setText("Crear Tabla");
         miCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -296,6 +389,14 @@ public class InterfazPrincipal extends javax.swing.JFrame {
             }
         });
         popUpUser.add(miPermisos);
+
+        miEditarPermisos.setText("Editar Permisos");
+        miEditarPermisos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miEditarPermisosActionPerformed(evt);
+            }
+        });
+        popUpUser.add(miEditarPermisos);
 
         limpiar.setText("Limpiar");
         limpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -803,6 +904,82 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         validarEntradas();
         lectorCode.setText("");
     }//GEN-LAST:event_ejecutarMouseClicked
+
+    private void miEditarPermisosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miEditarPermisosActionPerformed
+        if (gestion()) {
+            jdEditarPermisos.setTitle("Editar Pemisos");
+            jdEditarPermisos.setVisible(true);
+            jdEditarPermisos.pack();
+            jdEditarPermisos.setModal(true);
+            jdEditarPermisos.setLocationRelativeTo(this);
+            AdministrarUsuarios au = new AdministrarUsuarios("./Usuarios.jeay");
+            au.cargarArchivo();
+            int a = 0;
+            for (Usuario u : au.getUsuarios()) {
+                if (u.getNombreUsuario().equals(usuarioSeleccionado.getNombreUsuario())) {
+                    a = au.getUsuarios().indexOf(u);
+                }
+            }
+            ArrayList<String> permisos = au.getUsuarios().get(a).getPermisos();
+            labelUsuario.setText(usuarioSeleccionado.getNombre());
+            if (permisos.contains("GESTION")) {
+                Gestion.setEnabled(false);
+            }
+            if (permisos.contains("CREATE")) {
+                Create.setEnabled(false);
+            }
+            if (permisos.contains("INSERT")) {
+                Insert.setEnabled(false);
+            }
+            if (permisos.contains("SELECT")) {
+                Select.setEnabled(false);
+            }
+            if (permisos.contains("DELETE")) {
+                Delete.setEnabled(false);
+            }
+            if (permisos.contains("DROP")) {
+                Drop.setEnabled(false);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "El usuario actual no tiene permisos para gestionar usuarios");
+        }
+    }//GEN-LAST:event_miEditarPermisosActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        try {
+            AdministrarUsuarios au = new AdministrarUsuarios("./Usuarios.jeay");
+            au.cargarArchivo();
+            int a = 0;
+            for (Usuario u : au.getUsuarios()) {
+                if (u.getNombreUsuario().equals(usuarioSeleccionado.getNombreUsuario())) {
+                    a = au.getUsuarios().indexOf(u);
+                }
+            }
+            ArrayList<String> permisos = au.getUsuarios().get(a).getPermisos();
+            if (Gestion.isSelected()) {
+                permisos.add("GESTION");
+            }
+            if (Create.isSelected()) {
+                permisos.add("CREATE");
+            }
+            if (Insert.isSelected()) {
+                permisos.add("INSERT");
+            }
+            if (Select.isSelected()) {
+                permisos.add("SELECT");
+            }
+            if (Delete.isSelected()) {
+                permisos.add("DELETE");
+            }
+            if (Drop.isSelected()) {
+                permisos.add("DROP");
+            }
+            au.getUsuarios().get(a).setPermisos(permisos);
+            au.escribirArchivo();
+            jdEditarPermisos.dispose();
+        } catch (IOException ex) {
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
 
     public static void main(String args[]) {
 
@@ -2174,6 +2351,12 @@ public class InterfazPrincipal extends javax.swing.JFrame {
     //</editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox Create;
+    private javax.swing.JCheckBox Delete;
+    private javax.swing.JCheckBox Drop;
+    private javax.swing.JCheckBox Gestion;
+    private javax.swing.JCheckBox Insert;
+    private javax.swing.JCheckBox Select;
     private javax.swing.JButton btCrear;
     private javax.swing.JButton btIngresar;
     private javax.swing.JButton btLogIn;
@@ -2186,7 +2369,9 @@ public class InterfazPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton ejecutar;
     private javax.swing.JCheckBox gestion;
     private javax.swing.JCheckBox insert;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -2194,6 +2379,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -2202,14 +2388,17 @@ public class InterfazPrincipal extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JDialog jdEditarPermisos;
     private javax.swing.JDialog jdLogIn;
     private javax.swing.JDialog jdSignUp;
     private javax.swing.JMenu jmUsuarios;
+    private javax.swing.JLabel labelUsuario;
     private javax.swing.JTextPane lectorCode;
     private javax.swing.JPasswordField liContraseña;
     private javax.swing.JTextField liUsuario;
     private javax.swing.JMenuItem limpiar;
     private javax.swing.JMenuItem miCrear;
+    private javax.swing.JMenuItem miEditarPermisos;
     private javax.swing.JMenuItem miEliminar;
     private javax.swing.JMenuItem miEliminarT;
     private javax.swing.JMenuItem miLogIn;
