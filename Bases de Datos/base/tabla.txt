@@ -1,0 +1,8 @@
+#ENCABEZADO
+Nombre: tabla
+Creador: Jairo Aguilar
+Fecha de Creación: 2021/12/12
+Atributos: [x]
+
+#DETALLES
+[Adiós]
