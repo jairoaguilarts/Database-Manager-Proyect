@@ -1,15 +1,9 @@
 package proyecto;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Point;
-import java.awt.Stroke;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.*;
+import java.awt.event.*;
 import java.io.*;
-import java.text.SimpleDateFormat;
+import java.text.*;
 import java.util.*;
 import java.util.logging.*;
 import javax.swing.*;
@@ -68,7 +62,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         labelUsuario = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnGuardarPermisos = new javax.swing.JButton();
         Gestion = new javax.swing.JCheckBox();
         Create = new javax.swing.JCheckBox();
         Insert = new javax.swing.JCheckBox();
@@ -273,10 +267,10 @@ public class InterfazPrincipal extends javax.swing.JFrame {
 
         jLabel10.setText("Seleccione los permisos a dar:");
 
-        jButton1.setText("Guardar");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnGuardarPermisos.setText("Guardar");
+        btnGuardarPermisos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                btnGuardarPermisosMouseClicked(evt);
             }
         });
 
@@ -309,7 +303,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                             .addComponent(jLabel10)
                             .addGroup(jdEditarPermisosLayout.createSequentialGroup()
                                 .addGap(61, 61, 61)
-                                .addComponent(jButton1))))
+                                .addComponent(btnGuardarPermisos))))
                     .addGroup(jdEditarPermisosLayout.createSequentialGroup()
                         .addGap(97, 97, 97)
                         .addGroup(jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -329,8 +323,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jdEditarPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(jLabel10)
                 .addGap(18, 18, 18)
@@ -346,7 +339,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                     .addComponent(Insert)
                     .addComponent(Drop))
                 .addGap(48, 48, 48)
-                .addComponent(jButton1)
+                .addComponent(btnGuardarPermisos)
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
@@ -941,11 +934,10 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                 Drop.setEnabled(false);
             }
         } else {
-            JOptionPane.showMessageDialog(this, "El usuario actual no tiene permisos para gestionar usuarios");
         }
     }//GEN-LAST:event_miEditarPermisosActionPerformed
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void btnGuardarPermisosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuardarPermisosMouseClicked
         try {
             AdministrarUsuarios au = new AdministrarUsuarios("./Usuarios.jeay");
             au.cargarArchivo();
@@ -979,7 +971,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
             jdEditarPermisos.dispose();
         } catch (IOException ex) {
         }
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_btnGuardarPermisosMouseClicked
 
     public static void main(String args[]) {
 
@@ -1109,6 +1101,8 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                                 }
                             }
                         }
+                        DefaultTableModel m = new DefaultTableModel();
+                        tablaSelect.setModel(m);
                         break;
                     }
                     case "DROP", "drop" -> {
@@ -1155,6 +1149,8 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                                 }
                             }
                         }
+                        DefaultTableModel m = new DefaultTableModel();
+                        tablaSelect.setModel(m);
                         break;
                     }
                     case "GRANT", "grant" -> {
@@ -1187,6 +1183,8 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                                 valida = 1;
                             }
                         }
+                        DefaultTableModel m = new DefaultTableModel();
+                        tablaSelect.setModel(m);
                         break;
                     }
                     case "INSERT", "insert" -> {
@@ -1233,6 +1231,8 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                                 }
                             }
                         }
+                        DefaultTableModel m = new DefaultTableModel();
+                        tablaSelect.setModel(m);
                         break;
                     }
                     case "SELECT", "select" -> {
@@ -1721,6 +1721,8 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                                 }
                             }
                         }
+                        DefaultTableModel m = new DefaultTableModel();
+                        tablaSelect.setModel(m);
                         break;
                     }
                     case "UPDATE", "update" -> {
@@ -1771,6 +1773,8 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                                 }
                             }
                         }
+                        DefaultTableModel m = new DefaultTableModel();
+                        tablaSelect.setModel(m);
                         break;
                     }
                     case "DELETE", "delete" -> {
@@ -1821,6 +1825,8 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                                 }
                             }
                         }
+                        DefaultTableModel m = new DefaultTableModel();
+                        tablaSelect.setModel(m);
                         break;
                     }
                     case "TRUNCATE", "truncate" -> {
@@ -1855,6 +1861,8 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                                 }
                             }
                         }
+                        DefaultTableModel m = new DefaultTableModel();
+                        tablaSelect.setModel(m);
                         break;
                     }
                 }
@@ -2362,6 +2370,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btLogIn;
     private javax.swing.JButton btLogOut;
     private javax.swing.JButton btSignUp;
+    private javax.swing.JButton btnGuardarPermisos;
     private javax.swing.JCheckBox create;
     private javax.swing.JCheckBox delete;
     private javax.swing.JPanel diagrama;
@@ -2369,7 +2378,6 @@ public class InterfazPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton ejecutar;
     private javax.swing.JCheckBox gestion;
     private javax.swing.JCheckBox insert;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
