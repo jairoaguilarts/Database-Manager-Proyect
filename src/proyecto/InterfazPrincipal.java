@@ -1721,8 +1721,6 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                                 }
                             }
                         }
-                        DefaultTableModel m = new DefaultTableModel();
-                        tablaSelect.setModel(m);
                         break;
                     }
                     case "UPDATE", "update" -> {
