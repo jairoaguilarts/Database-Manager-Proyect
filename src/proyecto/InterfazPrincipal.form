@@ -490,7 +490,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="miLogIn">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/proyecto/IconoLogIn.png"/>
+                  <Image iconType="3" name="/images/IconoLogIn.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Log In"/>
               </Properties>
@@ -501,7 +501,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="miSignUp">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/proyecto/IconoSignUp.png"/>
+                  <Image iconType="3" name="/images/IconoSignUp.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Sign Up"/>
                 <Property name="enabled" type="boolean" value="false"/>
@@ -515,7 +515,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="miLogOut">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/proyecto/IconoLogOut.png"/>
+                  <Image iconType="3" name="/images/IconoLogOut.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Log Out"/>
                 <Property name="enabled" type="boolean" value="false"/>
@@ -595,7 +595,7 @@
         <Component class="javax.swing.JButton" name="btLogIn">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proyecto/IconoLogIn.png"/>
+              <Image iconType="3" name="/images/IconoLogIn.png"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -608,7 +608,7 @@
         <Component class="javax.swing.JButton" name="btSignUp">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proyecto/IconoSignUp.png"/>
+              <Image iconType="3" name="/images/IconoSignUp.png"/>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -622,7 +622,7 @@
         <Component class="javax.swing.JButton" name="btLogOut">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proyecto/IconoLogOut.png"/>
+              <Image iconType="3" name="/images/IconoLogOut.png"/>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
